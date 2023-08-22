@@ -32,7 +32,7 @@ const Hero = () => {
           your active life.
         </p>
 
-        <Button label="Shop Now" imgURl={arrowRight} />
+        <Button label="Shop Now" imgURL={arrowRight} />
 
         <div className="flex gap-8 mt-10">
           {statistics.map((stat) => (
