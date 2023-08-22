@@ -1,21 +1,27 @@
-import React, { lazy } from "react";
+import React, { useState } from "react";
 import Button from "../Components/Button";
 import { arrowRight } from "../assets/icons";
-import { statistics } from "../Constants";
+import { statistics, shoes } from "../Constants";
 import { bigShoe1 } from "../assets/images";
+import ShoeCard from "../Components/ShoeCard";
 
 const Hero = () => {
+  const [bigShoeImg, setBigShoeImg] = useState(bigShoe1);
+
   return (
     <section
       id="home"
-      className="w-full max-h-screen max-container flex flex-col xl:flex-row justify-center items-center gap-10 border-2 border-red-50 "
+      className="w-full  max-container flex flex-col xl:flex-row justify-center items-center max-sm:gap-10"
     >
-      <div className="flex flex-col  xl:w-2/5 w-full items-start max-xl:padding-x pt-28 max-h-screen">
+      <div className="flex flex-col  xl:w-2/5 w-full items-start pt-28 max-h-screen  max-xl:padding-x max-xl:space-x-4 max-sm:p-4 max-sm:pt-28 ">
         <p className="text-monsterrat text-coral-red text-[16px] font-light">
           Our Summer Collections
         </p>
-        <h1 className="text-[72px] max-sm:text-[64px] leading-[82px] text-palanquin font-medium pt-5 z-20">
-          <span className="xl:bg-white xl:whitespace-nowrap pr-[25%] z-10 rounded-md">
+        <h1
+          className="text-[72px] leading-[82px] 
+        max-sm:text-[48px] max-sm:leading-[56px] text-palanquin font-semibold pt-5 z-10"
+        >
+          <span className="xl:bg-white xl:whitespace-nowrap xl:pr-[25%] rounded-md">
             The New Arrival
           </span>
           <br />
@@ -30,7 +36,7 @@ const Hero = () => {
         <div className="flex gap-8 mt-10">
           {statistics.map((stat) => (
             <div className="max-w-sm" key={stat.label}>
-              <p className="text-[38px] font-bold text-palanquin">
+              <p className="text-[30px] font-bold text-palanquin">
                 {stat.value}
               </p>
               <p className="text-montserrat text-slate-gray">{stat.label}</p>
@@ -41,13 +47,24 @@ const Hero = () => {
 
       {/* big shoe image */}
 
-      <div className="flex flex-1 justify-center items-center h-full xl:min-h-screen  bg-white bg-hero bg-cover bg-center md:py-40 padding-x z-0">
+      <div className="flex flex-1 justify-center items-center h-full xl:min-h-screen  bg-white bg-hero bg-cover bg-center  padding-x z-0  py-40 rounded-r-xl max-sm:m-4 max-sm:py-20 max-xl:rounded-xl relative transition-all">
         <img
-          src={bigShoe1}
+          src={bigShoeImg}
           className="object-contain z-10 relative"
-          width={510}
+          width={500}
           height={502}
         />
+
+        <div className="absolute bottom-[-5%] max-[476px]:left-[2%] flex gap-4 sm:gap-6 max-sm:px-6">
+          {shoes.map((shoe, index) => (
+            <ShoeCard
+              key={index}
+              imgURL={shoe}
+              bigShoeImg={bigShoeImg}
+              changeBigShoeImg={(shoe) => setBigShoeImg(shoe)}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );
