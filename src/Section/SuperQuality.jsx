@@ -3,9 +3,11 @@ import Button from "../Components/Button";
 import { shoe8 } from "../assets/images";
 
 const SuperQuality = () => {
-  const newLocal = "text-";
   return (
-    <section className="flex flex-col xl:flex-row  justify-between items-center max-container gap-12 xl:p-8 p-2">
+    <section
+      className="flex flex-col xl:flex-row  justify-between items-center max-container gap-12 xl:p-8 p-2"
+      id="about-us"
+    >
       <div className="flex flex-col justify-start items-start">
         <h2 className=" text-4xl font-montserrat font-bold  leading-3xl lg:max-w-xl ">
           We Provide You <span className="text-coral-red">Super</span>

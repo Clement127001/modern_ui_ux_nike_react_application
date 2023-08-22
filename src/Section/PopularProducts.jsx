@@ -3,7 +3,7 @@ import { products } from "../Constants";
 import PopularProductsCard from "../Components/PopularProductsCard";
 const PopularProducts = () => {
   return (
-    <section className=" max-container p-8 max-sm:p-1 ">
+    <section className=" max-container p-8 max-sm:p-1 " id="products">
       <div className="flex flex-col gap-2 justify-start">
         <h2 className="text-[62px] max-sm:text-[48px] leading-tight font-montserrat font-semibold">
           Our <span className="text-coral-red">Popular </span> Products
