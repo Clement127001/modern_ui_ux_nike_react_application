@@ -19,7 +19,7 @@ const Hero = () => {
         </p>
         <h1
           className="text-[72px] leading-[82px] 
-        max-sm:text-[48px] max-sm:leading-[56px] text-palanquin font-semibold pt-5 z-10"
+        max-sm:text-[48px] max-sm:leading-[56px] text-palanquin font-semibold pt-5 z-5"
         >
           <span className="xl:bg-white xl:whitespace-nowrap xl:pr-[25%] rounded-md">
             The New Arrival
@@ -48,7 +48,7 @@ const Hero = () => {
 
       {/* big shoe image */}
 
-      <div className="flex flex-1 justify-center items-center h-full xl:min-h-screen  bg-white bg-hero bg-cover bg-center  padding-x z-0  py-40 rounded-r-xl max-sm:m-4 max-sm:py-20 max-xl:rounded-xl relative transition-all">
+      <div className="flex flex-1 justify-center items-center h-full xl:min-h-screen  bg-white bg-hero bg-cover bg-center  padding-x z-0  py-40 rounded-r-xl max-sm:m-4 max-sm:py-20 max-xl:rounded-xl relative transition-all mt-24">
         <img
           src={bigShoeImg}
           className="object-contain z-10 relative"

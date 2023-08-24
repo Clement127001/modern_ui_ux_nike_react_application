@@ -36,7 +36,7 @@ const Footer = () => {
 
               <ul className="mt-4">
                 {item.links.map((link) => (
-                  <li className="text-white-400 text-md leading-normal mt-2  hover:text-white cursor-pointer">
+                  <li className="text-white-400 text-[15px] leading-normal mt-2  hover:text-white cursor-pointer">
                     <a href={link.link}>{link.name}</a>
                   </li>
                 ))}
