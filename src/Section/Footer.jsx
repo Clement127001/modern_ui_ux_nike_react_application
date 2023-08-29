@@ -20,7 +20,10 @@ const Footer = () => {
           </p>
           <div className=" flex gap-4">
             {socialMedia.map((links) => (
-              <div className="w-12 h-12 p-3 bg-white rounded-full">
+              <div
+                className="w-12 h-12 p-3 bg-white rounded-full"
+                key={links.src}
+              >
                 <img src={links.src} alt={links.alt} width={24} height={24} />
               </div>
             ))}
@@ -36,7 +39,10 @@ const Footer = () => {
 
               <ul className="mt-4">
                 {item.links.map((link) => (
-                  <li className="text-white-400 text-[15px] leading-normal mt-2  hover:text-white cursor-pointer">
+                  <li
+                    className="text-white-400 text-[15px] leading-normal mt-2  hover:text-white cursor-pointer"
+                    key={link.name}
+                  >
                     <a href={link.link}>{link.name}</a>
                   </li>
                 ))}
